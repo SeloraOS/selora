@@ -99,7 +99,7 @@ export default function StickyShowcase() {
                   >
                     <AssetImage
                       src={getAsset(panels[active].asset)}
-                      alt={`${panels[active].label} product interface`}
+                      alt={`SeloraOS ${panels[active].label} enterprise interface — ${panels[active].title}`}
                       fallbackLabel={`${panels[active].label} asset pending`}
                       sizes="576px"
                     />
@@ -137,7 +137,7 @@ export default function StickyShowcase() {
                   <div className="lg:hidden relative mb-6 aspect-[16/10] overflow-hidden rounded-card border border-border bg-background shadow-elevated">
                     <AssetImage
                       src={getAsset(panel.asset)}
-                      alt={`${panel.label} product interface`}
+                      alt={`SeloraOS ${panel.label} enterprise interface — ${panel.title}`}
                       fallbackLabel={`${panel.label} asset pending`}
                       sizes="100vw"
                     />

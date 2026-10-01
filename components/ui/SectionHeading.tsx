@@ -9,6 +9,7 @@ interface SectionHeadingProps {
   description?: string;
   align?: "left" | "center";
   className?: string;
+  as?: "h1" | "h2" | "h3";
 }
 
 export default function SectionHeading({
@@ -17,7 +18,9 @@ export default function SectionHeading({
   description,
   align = "left",
   className,
+  as = "h2",
 }: SectionHeadingProps) {
+  const Tag = as;
   return (
     <div
       className={cn(
@@ -32,9 +35,9 @@ export default function SectionHeading({
         </Reveal>
       )}
       <Reveal delay={0.1}>
-        <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground text-balance">
+        <Tag className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground text-balance">
           {title}
-        </h2>
+        </Tag>
       </Reveal>
       {description && (
         <Reveal delay={0.2}>

@@ -1,12 +1,38 @@
 import type { Metric } from "@/types";
 
 export const SITE = {
-  name: "Selora",
-  tagline: "Technology for a better tomorrow.",
-  title: "Selora — Software That Simplifies Today and Scales Tomorrow",
+  name: "SeloraOS",
+  brandName: "SeloraOS",
+  shortName: "Selora",
+  domain: "seloraos.online",
+  url: "https://seloraos.online",
+  tagline: "Software That Simplifies Today and Scales Tomorrow.",
+  title: "SeloraOS — Enterprise CRM, ERP & Custom Software Solutions",
   description:
-    "Selora builds CRM, ERP, custom software, automation and technology solutions for modern businesses.",
-  url: "https://selora.example.com",
+    "SeloraOS builds bespoke CRM platforms, intelligent ERP systems, enterprise workflow automation, and custom software engineering for scaling businesses.",
+  keywords: [
+    "SeloraOS",
+    "seloraos.online",
+    "Selora OS",
+    "Selora",
+    "custom CRM development",
+    "enterprise ERP software",
+    "custom business software",
+    "business workflow automation",
+    "bespoke software engineering",
+    "cloud ERP systems",
+    "SaaS application development",
+    "enterprise systems integration",
+    "real estate CRM",
+    "manufacturing ERP platform",
+    "logistics fleet software",
+    "B2B software solutions",
+    "full-stack software development",
+  ],
+  author: "SeloraOS Technologies",
+  email: "contact@seloraos.online",
+  locale: "en_US",
+  twitterHandle: "@seloraos",
 };
 
 export const NAV_LINKS = [

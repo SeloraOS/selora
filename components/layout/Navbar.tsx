@@ -32,7 +32,7 @@ export default function Navbar() {
             scrolled ? "border-border shadow-elevated" : "border-border/60 shadow-subtle"
           )}
         >
-          <Link href="/" className="focus-ring flex shrink-0 items-center gap-2">
+          <Link href="/" aria-label="SeloraOS Home" className="focus-ring flex shrink-0 items-center gap-2">
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden>
               <path d="M10 0L12.5 7.5L20 10L12.5 12.5L10 20L7.5 12.5L0 10L7.5 7.5L10 0Z" fill="url(#logo-gradient)" />
               <defs>
@@ -42,7 +42,9 @@ export default function Navbar() {
                 </linearGradient>
               </defs>
             </svg>
-            <span className="text-base font-bold tracking-tight text-foreground">Selora</span>
+            <span className="text-base font-bold tracking-tight text-foreground">
+              Selora<span className="text-accent">OS</span>
+            </span>
           </Link>
 
           <ul className="hidden items-center gap-1 md:flex">

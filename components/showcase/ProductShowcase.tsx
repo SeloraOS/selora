@@ -96,7 +96,7 @@ export default function ProductShowcase() {
               <div className="relative aspect-[16/9] w-full border-t border-border">
                 <AssetImage
                   src={getAsset(activeTab.asset)}
-                  alt={`${activeTab.label} product interface`}
+                  alt={`SeloraOS ${activeTab.label} enterprise product architecture and interface`}
                   fallbackLabel={`${activeTab.label} asset pending`}
                   sizes="(max-width: 1024px) 100vw, 1152px"
                 />

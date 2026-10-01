@@ -5,22 +5,56 @@ import WhySeloraSection from "@/components/why/WhySeloraSection";
 import ProcessSection from "@/components/process/ProcessSection";
 import IndustriesSection from "@/components/industries/IndustriesSection";
 import CTASection from "@/components/cta/CTASection";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About SeloraOS — Engineering Discipline Meets Enterprise Strategy",
   description:
-    "Selora is a technology partner that builds CRM, ERP and custom software for growing businesses.",
+    "Learn about SeloraOS (seloraos.online), our engineering methodology, enterprise security standards, and why scaling businesses trust us for custom CRM and ERP systems.",
+  alternates: {
+    canonical: "/about",
+  },
+  keywords: [
+    "About SeloraOS",
+    "enterprise software company",
+    "custom software development agency",
+    "B2B software engineering",
+    "SeloraOS team",
+  ],
+  openGraph: {
+    title: "About SeloraOS — Engineering Discipline Meets Enterprise Strategy",
+    description:
+      "Learn about SeloraOS, our engineering philosophy, enterprise security standards, and why companies trust us to build custom CRM and ERP software.",
+    url: `${SITE.url}/about`,
+    siteName: SITE.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About SeloraOS — Engineering Discipline Meets Enterprise Strategy",
+    description:
+      "Learn about SeloraOS, our engineering philosophy, enterprise security standards, and why companies trust us to build custom CRM and ERP software.",
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about" },
+        ]}
+      />
       <section className="pb-20 pt-32 sm:pt-40">
         <div className="mx-auto max-w-container px-6 lg:px-10">
           <SectionHeading
-            eyebrow="About Selora"
+            as="h1"
+            eyebrow="About SeloraOS"
             title="Your business should not have to work around software. Your software should work around your business."
-            description="We're a technology partner for growing businesses — combining engineering discipline with a real understanding of how businesses operate, so the systems we build fit the way you work, not the other way around."
+            description="SeloraOS is an enterprise technology partner for growing businesses — combining rigorous software engineering discipline with operational insight, so the systems we build fit the way you work, not the other way around."
           />
 
           <Reveal delay={0.2}>
@@ -28,22 +62,22 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-sm font-semibold text-accent">Who We Serve</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  SMEs, startups and growing enterprises across real estate,
-                  healthcare, education, manufacturing, retail and logistics.
+                  SMEs, high-growth startups, and established enterprises across real estate,
+                  healthcare, education, manufacturing, retail, and logistics.
                 </p>
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-accent">What We Build</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  CRM and ERP platforms, custom web and mobile applications,
-                  automation systems and long-term technical support.
+                  Bespoke CRM platforms, high-performance ERP systems, custom web and mobile applications,
+                  intelligent automated workflows, and dedicated SLA support.
                 </p>
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-accent">How We Work</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  Transparent, collaborative and built around your goals from
-                  discovery through to long-term support.
+                  Transparent, agile, and aligned with your bottom-line metrics from architectural discovery
+                  through deployment and long-term scaling.
                 </p>
               </div>
             </div>

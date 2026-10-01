@@ -6,6 +6,7 @@ import WhySeloraSection from "@/components/why/WhySeloraSection";
 import ProcessSection from "@/components/process/ProcessSection";
 import CTASection from "@/components/cta/CTASection";
 import TestimonialsSection from "@/components/testimonials/TestimonialsSection";
+import FAQSection from "@/components/faq/FAQSection";
 import FinalCTASection from "@/components/cta/FinalCTASection";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <ProcessSection />
       <CTASection />
       <TestimonialsSection />
+      <FAQSection />
       <FinalCTASection />
     </>
   );

@@ -15,7 +15,9 @@ export default function MobileMenu({ onClose }: { onClose: () => void }) {
       className="fixed inset-0 z-[60] bg-white md:hidden"
     >
       <div className="flex items-center justify-between px-6 py-4">
-        <span className="text-lg font-bold tracking-tight text-foreground">Selora</span>
+        <span className="text-lg font-bold tracking-tight text-foreground">
+          Selora<span className="text-accent">OS</span>
+        </span>
         <button
           type="button"
           aria-label="Close menu"

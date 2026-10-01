@@ -27,7 +27,7 @@ export default function Hero() {
           animate="visible"
         >
           <motion.div variants={fadeUp}>
-            <Eyebrow icon={Zap}>Your Technology Partner</Eyebrow>
+            <Eyebrow icon={Zap}>SeloraOS • Enterprise Software & Systems</Eyebrow>
           </motion.div>
 
           <motion.h1
@@ -44,10 +44,9 @@ export default function Hero() {
             custom={0.2}
             className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg"
           >
-            We design and build powerful software solutions — CRM, ERP, custom
-            platforms and automation systems — backed by reliable technical
-            support, so you can focus on what you do best: growing your
-            business.
+            SeloraOS designs and builds bespoke enterprise software solutions —
+            custom CRM platforms, cloud ERP systems, workflow automation, and
+            scalable web platforms backed by dedicated 24/7 technical support.
           </motion.p>
 
           <motion.div variants={fadeUp} custom={0.3} className="mt-9 flex flex-wrap gap-4">

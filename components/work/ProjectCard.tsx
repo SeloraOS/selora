@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="h-full w-full transition-transform duration-500 group-hover:scale-105">
           <AssetImage
             src={project.asset}
-            alt={`${project.name} preview`}
+            alt={`SeloraOS ${project.name} — ${project.category} case study system preview`}
             fallbackLabel="Project asset pending"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
