@@ -11,6 +11,11 @@ export const SITE = {
   description:
     "SeloraOS builds bespoke CRM platforms, intelligent ERP systems, enterprise workflow automation, and custom software engineering for scaling businesses.",
   keywords: [
+    "Riaan Attar",
+    "riaan attar",
+    "Riaan Attar Selora",
+    "Riaan Attar SeloraOS",
+    "Riaan Attar software engineer",
     "SeloraOS",
     "seloraos.online",
     "Selora OS",
@@ -29,7 +34,9 @@ export const SITE = {
     "B2B software solutions",
     "full-stack software development",
   ],
-  author: "SeloraOS Technologies",
+  author: "Riaan Attar",
+  creator: "Riaan Attar",
+  organization: "SeloraOS Technologies",
   email: "contact@seloraos.online",
   locale: "en_US",
   twitterHandle: "@seloraos",

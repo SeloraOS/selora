@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   keywords: [
-    "About SeloraOS",
+    "Riaan Attar",
+    "Riaan Attar SeloraOS",
     "enterprise software company",
     "custom software development agency",
     "B2B software engineering",

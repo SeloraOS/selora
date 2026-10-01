@@ -17,6 +17,12 @@ export function OrganizationJsonLd() {
     image: `${SITE.url}/opengraph-image`,
     description: SITE.description,
     email: SITE.email,
+    founder: {
+      "@type": "Person",
+      name: "Riaan Attar",
+      jobTitle: "Founder & Software Engineer",
+      url: SITE.url,
+    },
     sameAs: [
       "https://linkedin.com",
       "https://x.com",

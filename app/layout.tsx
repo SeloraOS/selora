@@ -8,6 +8,7 @@ import GrainOverlay from "@/components/ui/GrainOverlay";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import BackToTop from "@/components/ui/BackToTop";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import { Analytics } from "@vercel/analytics/react";
 import {
   OrganizationJsonLd,
   WebSiteJsonLd,
@@ -43,8 +44,11 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: SITE.keywords,
-  authors: [{ name: SITE.name, url: SITE.url }],
-  creator: SITE.name,
+  authors: [
+    { name: "Riaan Attar", url: SITE.url },
+    { name: SITE.name, url: SITE.url },
+  ],
+  creator: "Riaan Attar",
   publisher: SITE.name,
   applicationName: SITE.name,
   category: "Enterprise Software & Cloud Solutions",
@@ -119,6 +123,7 @@ export default function RootLayout({
           <Footer />
         </SmoothScrollProvider>
         <BackToTop />
+        <Analytics />
       </body>
     </html>
   );
