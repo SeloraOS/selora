@@ -33,8 +33,39 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
   }
 
-  // Wire up an email provider or CRM webhook here to deliver the submission.
-  console.info("New contact submission", { name, email, company, message });
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key:
+          process.env.WEB3FORMS_ACCESS_KEY ||
+          process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
+          "1f5ef797-9188-4a69-bc57-31397ca054cb",
+        name,
+        email,
+        company,
+        message,
+      }),
+    });
+
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.success) {
+      return NextResponse.json(
+        { error: result.message || "Failed to submit message to Web3Forms." },
+        { status: response.status || 500 }
+      );
+    }
+  } catch (error) {
+    console.error("Web3Forms submission error:", error);
+    return NextResponse.json(
+      { error: "Internal server error occurred while sending message." },
+      { status: 500 }
+    );
+  }
 
   return NextResponse.json({ success: true });
 }

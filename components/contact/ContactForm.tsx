@@ -20,15 +20,19 @@ export default function ContactForm() {
     const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body.error ?? "Something went wrong. Please try again.");
+      const result = await res.json().catch(() => ({}));
+
+      if (!res.ok || !result.success) {
+        throw new Error(result.message || "Something went wrong. Please try again.");
       }
 
       setStatus("success");
@@ -52,7 +56,18 @@ export default function ContactForm() {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          onSubmit={handleSubmit}
+          className="space-y-5"
+          noValidate
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "1f5ef797-9188-4a69-bc57-31397ca054cb"}
+          />
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
               <label htmlFor="name" className="text-sm font-medium text-foreground">
